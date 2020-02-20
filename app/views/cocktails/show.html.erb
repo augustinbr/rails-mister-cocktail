@@ -1,0 +1,5 @@
+<h1>See the details of a given cocktail</h1>
+
+<p><%= @cocktail.name%></p>
+
+<%= link_to "Change the préparation, add a dose !", new_cocktail_dose_path(@cocktail.id) %>
