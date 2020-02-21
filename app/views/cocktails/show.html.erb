@@ -1,8 +1,29 @@
-<h1>See the details of a given cocktail</h1>
 
-<p><%= @cocktail.name%></p>
+<%= render "shared/navbar" %>
 
-<p><%= @cocktail.doses.first.description %></p>
-<p><%= @cocktail.ingredients.first.name %></p>
+<div class="container" style="background-color: #FBDFD1;">
+  <div class="content ">
 
-<%= link_to "Change the préparation, add a dose !", new_cocktail_dose_path(@cocktail.id) %>
+    <div class="d-flex justify-content-center m-5">
+
+      <div class="m-5">
+      <div class="card m-5 " style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= @cocktail.name%></h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <% @cocktail.doses.each do |dose| %>
+              <li class="list-group-item"><%= dose[:description] %> <br>
+              <%= dose.ingredient.name %></li>
+            <% end %>
+
+        </ul>
+        <div class="card-body text-center">
+          <button type="button" class="btn btn-dark"><%= link_to "Change the préparation !", new_cocktail_dose_path(@cocktail.id) %></button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

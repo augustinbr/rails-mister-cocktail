@@ -1,4 +1,20 @@
-<h1>Create a new cocktail !</h1>
+<%= render "shared/navbar" %>
 
-<%= render "form" %>
+<h1>Create a new  !</h1>
+
+<div class="container">
+      <div>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :description %>
+          <%= f.input :ingredient_id, collection: Ingredient.all %>
+          <%= f.submit %>
+        <% end %>
+
+      </div>
+      <div>
+
+        <img src="https://images.unsplash.com/photo-1555991910-65b4c0139fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" alt="jump">
+      </div>
+</div>
+
 

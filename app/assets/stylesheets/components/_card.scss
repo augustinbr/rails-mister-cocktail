@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+$lobster: 'Lobster', serif;
+
 .card-category {
   background-size: cover;
+  font-family: $lobster;
   background-position: center;
   height: 180px;
   width: 400px;
@@ -13,3 +18,8 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+a {
+  color: white;
+}
+

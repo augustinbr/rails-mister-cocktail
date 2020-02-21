@@ -1,20 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<%= render "shared/navbar" %>
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1485872299829-c673f5194813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
   <div class="container">
-    <h1>Cocktails brings <strong>skills</strong> to <strong>people</strong>!</h1>
-    <p>Learn how to prepare a cocktail and impresion your firends with your skils ! :)</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <h1>Cocktails brings <strong>skills</strong> to <strong>people</strong>!</h1> <br>
+    <p>Discover a cocktail and impresion your firends with your skils !</p>
   </div>
 </div>
 
 
+<div class="text-center m-5">
+  <h1>All our cocktails !</h1>
+</div>
 
-<h1>All our cocktails !</h1>
 
-
-<div class="d-flex justify-content-around">
+<div class="d-flex justify-content-around m-5">
 
   <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1586&q=80)">
       <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
     </div>
   <% end %>
@@ -22,7 +25,10 @@
 </div>
 
 
+<div class="text-center m-5">
+  <button type="button" class="btn btn-dark"><%= link_to "Add a new cocktail !", new_cocktail_path %></button>
 
-<%= link_to "Add a new cocktail !", new_cocktail_path %>
+
+</div>
 
 

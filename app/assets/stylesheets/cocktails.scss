@@ -1,3 +1,16 @@
 // Place all the styles related to the Cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+$lobster: 'Lobster', serif;
+
+h1 {
+  font-family: $lobster;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1509233725247-49e657c54213?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=987&q=80');
+  background-size: cover;
+}
