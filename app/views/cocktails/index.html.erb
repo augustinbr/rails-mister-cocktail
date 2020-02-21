@@ -11,13 +11,18 @@
 <h1>All our cocktails !</h1>
 
 
-<ul>
+<div class="d-flex justify-content-around">
 
   <% @cocktails.each do |cocktail| %>
-
-  <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
-
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+    </div>
   <% end %>
-</ul>
+
+</div>
+
+
 
 <%= link_to "Add a new cocktail !", new_cocktail_path %>
+
+

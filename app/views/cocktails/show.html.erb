@@ -3,5 +3,6 @@
 <p><%= @cocktail.name%></p>
 
 <p><%= @cocktail.doses.first.description %></p>
+<p><%= @cocktail.ingredients.first.name %></p>
 
 <%= link_to "Change the préparation, add a dose !", new_cocktail_dose_path(@cocktail.id) %>
