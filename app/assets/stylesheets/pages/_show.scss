@@ -1,16 +1,27 @@
 .container {
   display: flex;
   justify-content: center;
-  height: 600px;
+  height: 720px;
   position: absolute;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .content {
   border: 2px solid red;
-  width: 300px;
+  width: 450px;
   height: 300px;
   position: relative;
-  top: 248px
-  back
+  top: 421px;
+  left: 100px;
+}
+
+.btn-delete {
+  background-color: #000000;
+  padding: 5px;
+  width: 91px;
+  border-radius: 30px;
+  margin-top: 5px;
+  margin-left: 5px;
 }

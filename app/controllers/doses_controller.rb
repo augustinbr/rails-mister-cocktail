@@ -23,13 +23,13 @@ class DosesController < ApplicationController
     @dose = Dose.find(params[:id])
     @dose.destroy
 
-    redirect_to cocktail_path(@dose)
+    redirect_to cocktail_path(@dose.cocktail)
   end
 
-private
+  private
 
-def safe_dose
-  params.require(:dose).permit(:description, :ingredient_id)
-end
+  def safe_dose
+    params.require(:dose).permit(:description, :ingredient_id)
+  end
 
 end

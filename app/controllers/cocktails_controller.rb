@@ -21,10 +21,11 @@ class CocktailsController < ApplicationController
       render "new"
     end
   end
-end
 
-private
 
-def safe_cocktail
-  params.require(:cocktail).permit(:name)
+  private
+
+  def safe_cocktail
+    params.require(:cocktail).permit(:name)
+  end
 end
